@@ -1,14 +1,16 @@
 /* Change the font to whatever you like by going to google's APIs page!!! */
 
 
-$baseFontFamily: Dosis;
-@import url(http://fonts.googleapis.com/css?family=Dosis:500);
+$baseFontFamily: Droid Serif;
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 
-
+/* Set Primary Background on button to be green */
 $btnPrimaryBackground: green;
+
+/* Navigation bar background color */
 $navbarBackgroundHighlight: white;
 
-
+/* CSS code for bootstrap */
 @import 'bootstrap';
 
 body {
