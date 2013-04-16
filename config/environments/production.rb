@@ -70,4 +70,15 @@ Omrails::Application.configure do
   #Ensure you have defined default url options in your environments files.
   # In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+
+  # Configuration change to specify AWS as the file storage mechanism and the bucket in which assets will be stored.
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  }
+}
 end
